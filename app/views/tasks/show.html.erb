@@ -1,0 +1,11 @@
+<div class="add_task">
+	<% @tasks.each do |tarea| %>
+		<%= render "task", tarea: tarea %>
+	<% end -%>
+</div>
+
+
+<form>
+	<label>Title</label>
+	<input type="text" data-behavior="demo">
+</form>

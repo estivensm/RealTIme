@@ -1,0 +1,38 @@
+# == Schema Information
+#
+# Table name: tasks
+#
+#  id           :integer          not null, primary key
+#  title        :string
+#  body         :text
+#  user_id      :integer
+#  user_task_id :integer
+#  date_create  :date
+#  date_finish  :date
+#  comment_id   :integer
+#  state        :string
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  body: MyText
+  user_id: 1
+  user_task_id: 1
+  date_create: 2019-06-23
+  date_finish: 2019-06-23
+  comment_id: 1
+  state: MyString
+
+two:
+  title: MyString
+  body: MyText
+  user_id: 1
+  user_task_id: 1
+  date_create: 2019-06-23
+  date_finish: 2019-06-23
+  comment_id: 1
+  state: MyString
