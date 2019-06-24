@@ -15,12 +15,12 @@ App.room = App.cable.subscriptions.create("RoomChannel", {
 
 });
 
-$(document).on("keypress", '[data-behavior=demo]', function(event) {
-  if (event.keyCode == 13) {
-    App.room.speak(event.target.value);
-    event.target.value = '';
-    event.preventDefault();
-  }
-});
+//$(document).on("keypress", '[data-behavior=demo]', function(event) {
+  //if (event.keyCode == 13) {
+    //App.room.speak(event.target.value);
+    //event.target.value = '';
+    //event.preventDefault();
+  //}
+//});
 
 

@@ -1,11 +1,37 @@
-<div class="add_task">
-	<% @tasks.each do |tarea| %>
-		<%= render "task", tarea: tarea %>
-	<% end -%>
+<div class="container mt-5">
+	<div class="row">
+		<div class="col-md-6 card">
+			<div class="card-body">
+				<div class="col-md-6">
+					<div class="add_task">
+						<% @tasks.each do |tarea| %>
+							<%= render "task", tarea: tarea %>
+						<% end -%>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-6 card">
+			<div class="card-body">
+					<%= form_tag create_task_path, remote: true do %>
+
+						<label>Title</label>
+						<%= text_field_tag :title, nil, class: "form form-control" %>
+						<br>
+						<label>Contenido</label>
+						<%= text_area_tag :body, nil, class: "form form-control", :rows => 8 %>
+
+						<div class="modal-footer pr-0">
+							<%= submit_tag "Guardar", class: "btn btn-info" %>
+						</div>
+
+					<% end -%>
+			</div>
+		</div>
+
+	</div>
 </div>
 
 
-<form>
-	<label>Title</label>
-	<input type="text" data-behavior="demo">
-</form>
+
