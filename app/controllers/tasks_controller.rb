@@ -7,13 +7,6 @@ class TasksController < ApplicationController
 
 	def create
 	  	@tasks = Task.create(task_params)
-	  	respond_to do |format|
-	      if @profile_functions.save
-	        format.js
-	      else
-	        format.html { render :new }
-	      end
-	    end
 	end
 
 	  def new

@@ -1,8 +1,18 @@
 <div class="col-md-4 card-style mr-2 mt-2">
 	<div class="card <%= get_color_state(tarea.state)%>">
+
 	  <div class="card-header">
-	    <%= tarea.title %>
+	    <div class="row">
+	    	<div class="col-md-7">
+	    		<%= tarea.title %>
+	    	</div>
+
+	    	<div class="col-md-2">
+	    		<%= get_state(tarea.state).html_safe %>
+	    	</div>
+	    </div>
 	  </div>
+
 	  <div class="card-body">
 	    <p class="card-text"><%= tarea.body %></p>
 	  </div>
