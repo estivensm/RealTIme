@@ -1,7 +1,6 @@
 development:
-  adapter: async
-
-   url: redis://redistogo:5c56b4819a8289d30faa720ca4b83350@tarpon.redistogo.com:10098/
+  adapter: redis
+  url: redis://redistogo:5c56b4819a8289d30faa720ca4b83350@tarpon.redistogo.com:10098/
 
 
 test:
