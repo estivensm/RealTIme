@@ -18,7 +18,9 @@ class TasksController < ApplicationController
 	  end
 
 	  def update
-	    
+	  	if @task.update(task_params)
+	  		MessageBroadcastJob.perform_later @task
+	  	end
 	  end
 
 	  def destroy

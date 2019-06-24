@@ -17,8 +17,17 @@
 	    <p class="card-text"><%= tarea.body %></p>
 	  </div>
 	  <div class="modal-footer">
-	  	<%= get_button_state(tarea.state).html_safe %>
+	  	<% if tarea.state == "Pendiente" %>
+	  		<%= link_to "Realizada", update_task_path(tarea.id, "Realizada"), method: :post, remote: true, class: "btn btn-outline-success" %>
+	  		<%= link_to "No realizada", update_task_path(tarea.id, "No realizada"), method: :post, remote: true, class: "btn btn-outline-danger" %>
+	  	<% elsif tarea.state == "Importante" %>
+			<%= link_to "Realizada", update_task_path(tarea.id, "Realizada"), method: :post, remote: true, class: "btn btn-outline-success" %>
+	  		<%= link_to "No realizada", update_task_path(tarea.id, "No realizada"), method: :post, remote: true, class: "btn btn-outline-danger" %>
+		<% elsif tarea.state == "Realizada" %>
+	  		<button type="button" class="btn btn-outline-success" disabled>Completada</button>
+	  	<% end -%>
 	  </div>
+
 	</div>
 </div>
 

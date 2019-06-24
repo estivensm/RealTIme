@@ -3,10 +3,7 @@ module ApplicationHelper
 		[
 
 			["Pendiente", "Pendiente"],
-			["Importante", "Importante"],
-			["Realizada", "Realizada"],
-			["No realizada", "No realizada"]
-
+			["Importante", "Importante"]
 
 		]
 	end
@@ -21,18 +18,6 @@ module ApplicationHelper
 			"border-success"
 		elsif state == "No realizada"
 			"border-info"
-		end
-	end
-
-	def get_button_state(state)
-		if state == "Pendiente"
-			'<button type="button" class="btn btn-outline-success">Realizada</button>'
-		elsif state == "Importante"
-			'<button type="button" class="btn btn-outline-danger">Importante</button>'
-		elsif state == "Realizada"
-			'<button type="button" class="btn btn-outline-success">Realizada</button>'
-		elsif state == "No realizada"
-			'<button type="button" class="btn btn-outline-info">No realizada</button>'
 		end
 	end
 
