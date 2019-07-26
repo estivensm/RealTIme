@@ -2,7 +2,7 @@
 #
 # Table name: tasks
 #
-#  id           :integer          not null, primary key
+#  id           :bigint           not null, primary key
 #  title        :string
 #  body         :text
 #  user_id      :integer

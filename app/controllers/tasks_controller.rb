@@ -1,5 +1,6 @@
 class TasksController < ApplicationController
 	  before_action :set_task_function, only: [:destroy, :edit, :update]
+	  before_action :authenticate_user!
 
 	def show
 		@tasks = Task.all
